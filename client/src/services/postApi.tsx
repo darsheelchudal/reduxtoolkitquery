@@ -8,9 +8,12 @@ export const postApi = createApi({
     posts: builder.query<Post[], void>({
       query: () => "/posts",
     }),
+    singlepost: builder.query<Post, string>({
+      query: (id) => `/posts/${id}`,
+    }),
   }),
 });
 
-export const { usePostsQuery } = postApi; // Correctly export the generated hook
+export const { usePostsQuery, useSinglepostQuery } = postApi;
 
 export default postApi;
