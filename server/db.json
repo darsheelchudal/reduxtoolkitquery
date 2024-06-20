@@ -2,42 +2,32 @@
     "posts": [
         {
             "id": "1",
-            "title": "a title",
+            "title": "Darsheel",
             "views": 100
         },
         {
             "id": "2",
-            "title": "another title",
+            "title": "Chudal",
             "views": 400
         },
         {
             "id": "3",
-            "title": "weiudsuyhj",
+            "title": "Ghanashyam",
             "views": 400
         },
         {
             "id": "4",
-            "title": "weiudsuyhj",
+            "title": "Darshan",
             "views": 400
         },
         {
             "id": "5",
-            "title": "weiudsuyhj",
+            "title": "Suyog",
             "views": 600
         },
         {
             "id": "6",
-            "title": "weiudsuyhj",
-            "views": 600
-        },
-        {
-            "id": "7",
-            "title": "helo",
-            "views": 600
-        },
-        {
-            "id": "8",
-            "title": "helo",
+            "title": "Shisha",
             "views": 600
         }
     ]

@@ -1,13 +1,32 @@
-import { useState } from "react";
-
 import "./App.css";
+import { usePostsQuery } from "./services/postApi";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { data, error, isLoading, isFetching, isSuccess } = usePostsQuery();
+
+  data && console.log(data);
 
   return (
     <>
-      <div>Hello</div>
+      <div className="app">
+        <h1>React Redux Toolkit RTK Query</h1>
+        {isLoading && <h2>Loading...</h2>}
+        {isFetching && <h2>Fetching...</h2>}
+        {error && <h2>Something went wrong..</h2>}
+        {isSuccess && (
+          <div>
+            {data?.map((post) => {
+              return (
+                <>
+                  <div className="data" key={post.id}>
+                    <span>{post.title}</span>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </>
   );
 }
