@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon json-server -p 8000 db.json"
+    "start": "nodemon --exec json-server -- -p 8000 db.json"
   },
   "author": "",
   "license": "ISC",
