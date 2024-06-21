@@ -9,7 +9,7 @@ import {
 import { Post } from "./services/postApi"; // Ensure you import the Post interface
 
 function App() {
-  const { data, error, isLoading, isFetching, isSuccess } = usePostsQuery();
+  const { data } = usePostsQuery();
 
   data && console.log(data);
 
@@ -18,27 +18,21 @@ function App() {
       <div className="app">
         <h1>React Redux Toolkit RTK Query</h1>
 
-        {isLoading && <h2>Loading...</h2>}
-        {isFetching && <h2>Fetching...</h2>}
-        {error && <h2>Something went wrong..</h2>}
-
-        {isSuccess && (
+        <div>
+          {data?.map((post) => {
+            return (
+              <div className="data" key={post.id}>
+                <span>{post.title}</span>
+                <span>
+                  <SinglePost id={post.id.toString()} />
+                </span>
+              </div>
+            );
+          })}
           <div>
-            {data?.map((post) => {
-              return (
-                <div className="data" key={post.id}>
-                  <span>{post.title}</span>
-                  <span>
-                    <SinglePost id={post.id.toString()} />
-                  </span>
-                </div>
-              );
-            })}
-            <div>
-              <AddPost />
-            </div>
+            <AddPost />
           </div>
-        )}
+        </div>
       </div>
     </>
   );
@@ -61,7 +55,7 @@ export const AddPost = () => {
 
   const initialPost: Post = { id: "1", title: "Darsheel", views: 100 };
 
-  const updatedPost: Post = { id: "1", title: "Darsheel", views: 100 };
+  const updatedPost: Post = { id: "6", title: "Shisha", views: 600 };
 
   const addHandler = async () => {
     await addPost(initialPost);

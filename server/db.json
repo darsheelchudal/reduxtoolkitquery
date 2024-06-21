@@ -1,24 +1,5 @@
 {
-  "posts": [
-    {
-      "id": "2",
-      "title": "Chudal",
-      "views": 400
-    },
-    {
-      "id": "3",
-      "title": "Ghanashyam",
-      "views": 400
-    },
-    {
-      "id": "5",
-      "title": "Suyog",
-      "views": 600
-    },
-    {
-      "id": "6",
-      "title": "Shisha",
-      "views": 600
-    }
-  ]
+  "name": "Darsheel",
+  "title": "DB",
+  "views": 600
 }
